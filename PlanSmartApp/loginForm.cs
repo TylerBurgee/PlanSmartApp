@@ -19,31 +19,43 @@ namespace PlanSmartApp
 
         private void login_Button_Click(object sender, EventArgs e)
         {
-            // Obtain user's inputted login credentials
-            string username = username_TextBox.Text;
-            string password = password_TextBox.Text;
-
-            // Verify login credentials
-            bool login_successful = Login.verifyCredentials(username, password);
-
-            if (login_successful)
+            // Check for null TextBoxes
+            if (this.Controls.OfType<TextBox>().Any(t => string.IsNullOrEmpty(t.Text)))
             {
-                // Show main program form, hide login form
-                var mainForm = new mainForm();
-                mainForm.Show();
-                this.Hide();
+                // One or more TextBoxes are empty
+                MessageBox.Show("Username and password must be entered to login!");
             }
             else
             {
-                // Show error message, reset password textbox
-                MessageBox.Show("Login failed! Incorrect username or password.");
-                password_TextBox.Text = "";
+                // No TextBoxes are empty
+
+                // Obtain user's inputted login credentials
+                string username = username_TextBox.Text;
+                string password = password_TextBox.Text;
+
+                // Verify login credentials
+                bool login_successful = Login.verifyCredentials(username, password);
+
+                if (login_successful)
+                {
+                    // Show main programForm, hide loginForm
+                    var mainForm = new mainForm();
+                    mainForm.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    // Show error message, reset password textbox
+                    MessageBox.Show("Login failed! Incorrect username or password.");
+                    password_TextBox.Text = "";
+                }
             }
         }
 
         private void createAccount_Button_Click(object sender, EventArgs e)
         {
-            
+            var signupForm = new signupForm();
+            signupForm.Show();
         }
     }
 }
