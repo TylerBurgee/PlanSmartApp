@@ -1,0 +1,49 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace PlanSmartApp
+{
+    public partial class loginForm : Form
+    {
+        public loginForm()
+        {
+            InitializeComponent();
+        }
+
+        private void login_Button_Click(object sender, EventArgs e)
+        {
+            // Obtain user's inputted login credentials
+            string username = username_TextBox.Text;
+            string password = password_TextBox.Text;
+
+            // Verify login credentials
+            bool login_successful = Login.verifyCredentials(username, password);
+
+            if (login_successful)
+            {
+                // Show main program form, hide login form
+                var mainForm = new mainForm();
+                mainForm.Show();
+                this.Hide();
+            }
+            else
+            {
+                // Show error message, reset password textbox
+                MessageBox.Show("Login failed! Incorrect username or password.");
+                password_TextBox.Text = "";
+            }
+        }
+
+        private void createAccount_Button_Click(object sender, EventArgs e)
+        {
+            
+        }
+    }
+}
