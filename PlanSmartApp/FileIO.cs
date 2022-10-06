@@ -15,8 +15,8 @@ public class FileIO
 	/* Create new sub-dictionary within .json file*/
 	public static void create_subdict(string filename, Dictionary<string, string> new_subdict)
 	{
-	// sub-dictionary looks like this within the .json file: 
-	//{id1: {key1: value1, key2: value2}, id2: {key1: value1, key2: value2}}
+	// Sub-dictionaries looks like this within the .json file: 
+	// {id1: {key1: value1, key2: value2}, id2: {key1: value1, key2: value2}}
 	}
 
 	/* Delete sub-dictionary from .json file*/
