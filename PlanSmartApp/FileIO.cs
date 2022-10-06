@@ -6,7 +6,7 @@ public class FileIO
 	{
 	}
 
-	/* Creates new .json file*/
+	/* Creates new, empty .json file*/
 	public static void create_file(string filename)
 	{
 
