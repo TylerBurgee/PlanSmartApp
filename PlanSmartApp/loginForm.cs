@@ -54,6 +54,10 @@ namespace PlanSmartApp
 
         private void createAccount_Button_Click(object sender, EventArgs e)
         {
+            FileIO.create_file("testDatabase.json");
+            Dictionary<int, string> myDict = new Dictionary<int, string>();
+            myDict.Add(1, "Hello");
+            FileIO.create_subdict("testDatabase.json", myDict);
             var signupForm = new signupForm();
             signupForm.Show();
         }
