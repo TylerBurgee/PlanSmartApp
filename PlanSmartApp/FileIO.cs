@@ -12,7 +12,7 @@ public class FileIO
 
 	}
 
-    /* Delete content from .json file*/
+    /* Delete sub-dictionary from .json file*/
     public static void delete_from_file(string filename)
 	{
 
