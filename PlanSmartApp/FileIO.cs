@@ -19,7 +19,11 @@ public class FileIO
 	{
 		// Sub-dictionaries looks like this within the .json file: 
 		// {id1: {key1: value1, key2: value2}, id2: {key1: value1, key2: value2}}
-		System.IO.File.WriteAllText(filename, new_subdict.ToString());
+		for (int i = 0; i < new_subdict.Count; i++)
+		{
+
+		}
+		System.IO.File.WriteAllText(filename);
 	}
 
 	/* Delete sub-dictionary from .json file*/
