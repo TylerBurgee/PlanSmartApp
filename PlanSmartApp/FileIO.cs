@@ -1,6 +1,8 @@
 ﻿using Microsoft.VisualBasic.ApplicationServices;
 using System;
 using System.Text.Json;
+using System.Text.Json.Serialization;
+
 public class FileIO
 {
 	public FileIO() 
@@ -19,11 +21,10 @@ public class FileIO
 	{
 		// Sub-dictionaries looks like this within the .json file: 
 		// {id1: {key1: value1, key2: value2}, id2: {key1: value1, key2: value2}}
-		for (int i = 0; i < new_subdict.Count; i++)
+		foreach (KeyValuePair<string, string> entry in new_subdict)
 		{
-
-		}
-		System.IO.File.WriteAllText(filename);
+            System.IO.File.WriteAllText(filename, entry.Value);
+        }
 	}
 
 	/* Delete sub-dictionary from .json file*/
