@@ -15,6 +15,7 @@ namespace PlanSmartApp
         private int currentMonth;
         private int currentYear;
         private DateTime date;
+
         List<Button> calendarButtons;
 
         public mainForm()
@@ -22,7 +23,7 @@ namespace PlanSmartApp
             InitializeComponent();
 
             this.currentMonth = DateTime.Today.Month;
-            this.currentYear = 2022;
+            this.currentYear = DateTime.Today.Year;
             this.date = new DateTime(currentYear, currentMonth, 1);
 
             this.calendarButtons = new List<Button>
@@ -52,24 +53,21 @@ namespace PlanSmartApp
                     calendarButtons[i].Text = date.AddDays(i).Day.ToString();
                     calendarButtons[i].Text += "\n" + date.AddDays(i).DayOfWeek.ToString();
                 }
-                else
-                {
-                    calendarButtons[i].Text = "...";
-                }
+                else { calendarButtons[i].Text = "..."; }
             }
         }
 
         private void calendar_Button_Click(object sender, EventArgs e)
         {
-            
+            // Show main programForm, hide loginForm
+            var eventsForm = new eventsForm();
+            eventsForm.Show();
         }
 
         private void previousMonth_Button_Click(object sender, EventArgs e)
         {
             if (currentMonth > 1)
-            {
                 currentMonth --;
-            }
             else
             {
                 currentMonth = 12;
@@ -81,10 +79,8 @@ namespace PlanSmartApp
 
         private void nextMonth_Button_Click(object sender, EventArgs e)
         {
-            if (currentMonth < 12)
-            {
+            if (currentMonth < 12) 
                 currentMonth++;
-            } 
             else
             {
                 currentMonth = 1;

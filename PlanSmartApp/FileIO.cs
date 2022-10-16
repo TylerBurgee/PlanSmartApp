@@ -9,13 +9,13 @@ public class FileIO
 	{
 	}
 
-	/* Creates new, empty .json file*/
+	/* Creates new, empty .json file */
 	public static void create_file(string filename)
 	{
 		using (FileStream fs = File.Create(filename));
     }
 	
-	/* Create new sub-dictionary within .json file*/
+	/* Create new sub-dictionary within .json file */
 	public static void create_subdict(string filename, Dictionary<string, string> new_subdict)
 	{
 		// Sub-dictionaries looks like this within the .json file: 
@@ -31,15 +31,15 @@ public class FileIO
         System.IO.File.WriteAllText(filename, dataToWrite);
 	}
 
-	/* Delete sub-dictionary from .json file*/
+	/* Delete sub-dictionary from .json file */
 	public static void delete_subdict(string filename)
 	{
 		File.Delete(filename);
 	}
 
-	/* Add new key-pair value to existing sub-dictionary within .json file
-	public static void add_to_subdict(string filename, Dictionary<string, string> new)
+	/* Add new key-pair value to existing sub-dictionary within .json file */
+	public static void add_to_subdict(string filename)
 	{
-		new.add(string, string);
-	}*/
+
+	}
 }

@@ -6,18 +6,23 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 public class Event
 
 {
+    private string filename;
+
     private string name;
     private string time;
     private string location;
 
     public Event(string name, string time, string location)
-	{   
+	{
+        this.filename = "events.json";
+
         this.name = name;
         this.time = time;
         this.location = location;
 	}
 
-	public void createEvent()
+    /* Formats event to be saved into databse */
+	public static void createEvent(string name, string time, string location)
 	{
         // Create dictionary with event details
         Dictionary<string, string> new_event = new Dictionary<string, string>();
@@ -25,8 +30,8 @@ public class Event
         new_event.Add("time", time);
         new_event.Add("location", location);
 
-        // Save dictionart to events database
-
+        // Save dictionary to events database
+        FileIO.create_subdict("events.json", new_event);
     }
 
     public void deleteEvent(string event_id)
