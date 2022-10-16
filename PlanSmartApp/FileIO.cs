@@ -13,7 +13,6 @@ public class FileIO
 	public static void create_file(string filename)
 	{
 		using (FileStream fs = File.Create(filename));
-
     }
 	
 	/* Create new sub-dictionary within .json file*/
@@ -21,10 +20,15 @@ public class FileIO
 	{
 		// Sub-dictionaries looks like this within the .json file: 
 		// {id1: {key1: value1, key2: value2}, id2: {key1: value1, key2: value2}}
-		foreach (KeyValuePair<string, string> entry in new_subdict)
+		string dataToWrite = "{\"1000\": {";
+		foreach (KeyValuePair<string, string> element in new_subdict)
 		{
-            System.IO.File.WriteAllText(filename, entry.Value);
-        }
+            dataToWrite = dataToWrite + "\"" + element.Key + "\":\"" + element.Value + "\",";
+
+        } 
+        dataToWrite = dataToWrite + "}}";
+
+        System.IO.File.WriteAllText(filename, dataToWrite);
 	}
 
 	/* Delete sub-dictionary from .json file*/

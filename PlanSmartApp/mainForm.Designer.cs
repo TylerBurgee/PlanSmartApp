@@ -47,26 +47,26 @@
             this.calendar_Button23 = new System.Windows.Forms.Button();
             this.calendar_Button16 = new System.Windows.Forms.Button();
             this.calendar_Button9 = new System.Windows.Forms.Button();
-            this.calendar_Button31 = new System.Windows.Forms.Button();
             this.calendar_Button24 = new System.Windows.Forms.Button();
             this.calendar_Button17 = new System.Windows.Forms.Button();
             this.calendar_Button10 = new System.Windows.Forms.Button();
-            this.calendar_Button32 = new System.Windows.Forms.Button();
             this.calendar_Button25 = new System.Windows.Forms.Button();
             this.calendar_Button18 = new System.Windows.Forms.Button();
             this.calendar_Button11 = new System.Windows.Forms.Button();
-            this.calendar_Button33 = new System.Windows.Forms.Button();
             this.calendar_Button26 = new System.Windows.Forms.Button();
             this.calendar_Button19 = new System.Windows.Forms.Button();
             this.calendar_Button12 = new System.Windows.Forms.Button();
-            this.calendar_Button34 = new System.Windows.Forms.Button();
             this.calendar_Button27 = new System.Windows.Forms.Button();
             this.calendar_Button20 = new System.Windows.Forms.Button();
             this.calendar_Button13 = new System.Windows.Forms.Button();
+            this.nextMonth_Button = new System.Windows.Forms.Button();
+            this.previousMonth_Button = new System.Windows.Forms.Button();
+            this.monthYear_Label = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // calendar_Button0
             // 
+            this.calendar_Button0.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.calendar_Button0.Location = new System.Drawing.Point(0, 88);
             this.calendar_Button0.Name = "calendar_Button0";
             this.calendar_Button0.Size = new System.Drawing.Size(88, 72);
@@ -77,6 +77,7 @@
             // 
             // calendar_Button1
             // 
+            this.calendar_Button1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.calendar_Button1.Location = new System.Drawing.Point(88, 88);
             this.calendar_Button1.Name = "calendar_Button1";
             this.calendar_Button1.Size = new System.Drawing.Size(88, 72);
@@ -87,6 +88,7 @@
             // 
             // calendar_Button2
             // 
+            this.calendar_Button2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.calendar_Button2.Location = new System.Drawing.Point(176, 88);
             this.calendar_Button2.Name = "calendar_Button2";
             this.calendar_Button2.Size = new System.Drawing.Size(88, 72);
@@ -96,6 +98,7 @@
             // 
             // calendar_Button3
             // 
+            this.calendar_Button3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.calendar_Button3.Location = new System.Drawing.Point(264, 88);
             this.calendar_Button3.Name = "calendar_Button3";
             this.calendar_Button3.Size = new System.Drawing.Size(88, 72);
@@ -105,6 +108,7 @@
             // 
             // calendar_Button4
             // 
+            this.calendar_Button4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.calendar_Button4.Location = new System.Drawing.Point(352, 88);
             this.calendar_Button4.Name = "calendar_Button4";
             this.calendar_Button4.Size = new System.Drawing.Size(88, 72);
@@ -114,6 +118,7 @@
             // 
             // calendar_Button5
             // 
+            this.calendar_Button5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.calendar_Button5.Location = new System.Drawing.Point(440, 88);
             this.calendar_Button5.Name = "calendar_Button5";
             this.calendar_Button5.Size = new System.Drawing.Size(88, 72);
@@ -123,6 +128,7 @@
             // 
             // calendar_Button6
             // 
+            this.calendar_Button6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.calendar_Button6.Location = new System.Drawing.Point(528, 88);
             this.calendar_Button6.Name = "calendar_Button6";
             this.calendar_Button6.Size = new System.Drawing.Size(88, 72);
@@ -132,6 +138,7 @@
             // 
             // calendar_Button7
             // 
+            this.calendar_Button7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.calendar_Button7.Location = new System.Drawing.Point(0, 160);
             this.calendar_Button7.Name = "calendar_Button7";
             this.calendar_Button7.Size = new System.Drawing.Size(88, 72);
@@ -141,6 +148,7 @@
             // 
             // calendar_Button14
             // 
+            this.calendar_Button14.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.calendar_Button14.Location = new System.Drawing.Point(0, 232);
             this.calendar_Button14.Name = "calendar_Button14";
             this.calendar_Button14.Size = new System.Drawing.Size(88, 72);
@@ -150,6 +158,7 @@
             // 
             // calendar_Button21
             // 
+            this.calendar_Button21.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.calendar_Button21.Location = new System.Drawing.Point(0, 304);
             this.calendar_Button21.Name = "calendar_Button21";
             this.calendar_Button21.Size = new System.Drawing.Size(88, 72);
@@ -159,6 +168,7 @@
             // 
             // calendar_Button28
             // 
+            this.calendar_Button28.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.calendar_Button28.Location = new System.Drawing.Point(0, 376);
             this.calendar_Button28.Name = "calendar_Button28";
             this.calendar_Button28.Size = new System.Drawing.Size(88, 72);
@@ -168,6 +178,7 @@
             // 
             // calendar_Button29
             // 
+            this.calendar_Button29.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.calendar_Button29.Location = new System.Drawing.Point(88, 376);
             this.calendar_Button29.Name = "calendar_Button29";
             this.calendar_Button29.Size = new System.Drawing.Size(88, 72);
@@ -177,6 +188,7 @@
             // 
             // calendar_Button22
             // 
+            this.calendar_Button22.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.calendar_Button22.Location = new System.Drawing.Point(88, 304);
             this.calendar_Button22.Name = "calendar_Button22";
             this.calendar_Button22.Size = new System.Drawing.Size(88, 72);
@@ -186,6 +198,7 @@
             // 
             // calendar_Button15
             // 
+            this.calendar_Button15.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.calendar_Button15.Location = new System.Drawing.Point(88, 232);
             this.calendar_Button15.Name = "calendar_Button15";
             this.calendar_Button15.Size = new System.Drawing.Size(88, 72);
@@ -195,6 +208,7 @@
             // 
             // calendar_Button8
             // 
+            this.calendar_Button8.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.calendar_Button8.Location = new System.Drawing.Point(88, 160);
             this.calendar_Button8.Name = "calendar_Button8";
             this.calendar_Button8.Size = new System.Drawing.Size(88, 72);
@@ -204,6 +218,7 @@
             // 
             // calendar_Button30
             // 
+            this.calendar_Button30.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.calendar_Button30.Location = new System.Drawing.Point(176, 376);
             this.calendar_Button30.Name = "calendar_Button30";
             this.calendar_Button30.Size = new System.Drawing.Size(88, 72);
@@ -213,6 +228,7 @@
             // 
             // calendar_Button23
             // 
+            this.calendar_Button23.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.calendar_Button23.Location = new System.Drawing.Point(176, 304);
             this.calendar_Button23.Name = "calendar_Button23";
             this.calendar_Button23.Size = new System.Drawing.Size(88, 72);
@@ -222,6 +238,7 @@
             // 
             // calendar_Button16
             // 
+            this.calendar_Button16.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.calendar_Button16.Location = new System.Drawing.Point(176, 232);
             this.calendar_Button16.Name = "calendar_Button16";
             this.calendar_Button16.Size = new System.Drawing.Size(88, 72);
@@ -231,6 +248,7 @@
             // 
             // calendar_Button9
             // 
+            this.calendar_Button9.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.calendar_Button9.Location = new System.Drawing.Point(176, 160);
             this.calendar_Button9.Name = "calendar_Button9";
             this.calendar_Button9.Size = new System.Drawing.Size(88, 72);
@@ -238,17 +256,9 @@
             this.calendar_Button9.Text = "button9";
             this.calendar_Button9.UseVisualStyleBackColor = true;
             // 
-            // calendar_Button31
-            // 
-            this.calendar_Button31.Location = new System.Drawing.Point(264, 376);
-            this.calendar_Button31.Name = "calendar_Button31";
-            this.calendar_Button31.Size = new System.Drawing.Size(88, 72);
-            this.calendar_Button31.TabIndex = 22;
-            this.calendar_Button31.Text = "button31";
-            this.calendar_Button31.UseVisualStyleBackColor = true;
-            // 
             // calendar_Button24
             // 
+            this.calendar_Button24.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.calendar_Button24.Location = new System.Drawing.Point(264, 304);
             this.calendar_Button24.Name = "calendar_Button24";
             this.calendar_Button24.Size = new System.Drawing.Size(88, 72);
@@ -258,6 +268,7 @@
             // 
             // calendar_Button17
             // 
+            this.calendar_Button17.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.calendar_Button17.Location = new System.Drawing.Point(264, 232);
             this.calendar_Button17.Name = "calendar_Button17";
             this.calendar_Button17.Size = new System.Drawing.Size(88, 72);
@@ -267,6 +278,7 @@
             // 
             // calendar_Button10
             // 
+            this.calendar_Button10.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.calendar_Button10.Location = new System.Drawing.Point(264, 160);
             this.calendar_Button10.Name = "calendar_Button10";
             this.calendar_Button10.Size = new System.Drawing.Size(88, 72);
@@ -274,17 +286,9 @@
             this.calendar_Button10.Text = "button10";
             this.calendar_Button10.UseVisualStyleBackColor = true;
             // 
-            // calendar_Button32
-            // 
-            this.calendar_Button32.Location = new System.Drawing.Point(352, 376);
-            this.calendar_Button32.Name = "calendar_Button32";
-            this.calendar_Button32.Size = new System.Drawing.Size(88, 72);
-            this.calendar_Button32.TabIndex = 26;
-            this.calendar_Button32.Text = "button32";
-            this.calendar_Button32.UseVisualStyleBackColor = true;
-            // 
             // calendar_Button25
             // 
+            this.calendar_Button25.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.calendar_Button25.Location = new System.Drawing.Point(352, 304);
             this.calendar_Button25.Name = "calendar_Button25";
             this.calendar_Button25.Size = new System.Drawing.Size(88, 72);
@@ -294,6 +298,7 @@
             // 
             // calendar_Button18
             // 
+            this.calendar_Button18.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.calendar_Button18.Location = new System.Drawing.Point(352, 232);
             this.calendar_Button18.Name = "calendar_Button18";
             this.calendar_Button18.Size = new System.Drawing.Size(88, 72);
@@ -303,6 +308,7 @@
             // 
             // calendar_Button11
             // 
+            this.calendar_Button11.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.calendar_Button11.Location = new System.Drawing.Point(352, 160);
             this.calendar_Button11.Name = "calendar_Button11";
             this.calendar_Button11.Size = new System.Drawing.Size(88, 72);
@@ -310,17 +316,9 @@
             this.calendar_Button11.Text = "button11";
             this.calendar_Button11.UseVisualStyleBackColor = true;
             // 
-            // calendar_Button33
-            // 
-            this.calendar_Button33.Location = new System.Drawing.Point(440, 376);
-            this.calendar_Button33.Name = "calendar_Button33";
-            this.calendar_Button33.Size = new System.Drawing.Size(88, 72);
-            this.calendar_Button33.TabIndex = 30;
-            this.calendar_Button33.Text = "button33";
-            this.calendar_Button33.UseVisualStyleBackColor = true;
-            // 
             // calendar_Button26
             // 
+            this.calendar_Button26.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.calendar_Button26.Location = new System.Drawing.Point(440, 304);
             this.calendar_Button26.Name = "calendar_Button26";
             this.calendar_Button26.Size = new System.Drawing.Size(88, 72);
@@ -330,6 +328,7 @@
             // 
             // calendar_Button19
             // 
+            this.calendar_Button19.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.calendar_Button19.Location = new System.Drawing.Point(440, 232);
             this.calendar_Button19.Name = "calendar_Button19";
             this.calendar_Button19.Size = new System.Drawing.Size(88, 72);
@@ -339,6 +338,7 @@
             // 
             // calendar_Button12
             // 
+            this.calendar_Button12.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.calendar_Button12.Location = new System.Drawing.Point(440, 160);
             this.calendar_Button12.Name = "calendar_Button12";
             this.calendar_Button12.Size = new System.Drawing.Size(88, 72);
@@ -346,17 +346,9 @@
             this.calendar_Button12.Text = "button12";
             this.calendar_Button12.UseVisualStyleBackColor = true;
             // 
-            // calendar_Button34
-            // 
-            this.calendar_Button34.Location = new System.Drawing.Point(528, 376);
-            this.calendar_Button34.Name = "calendar_Button34";
-            this.calendar_Button34.Size = new System.Drawing.Size(88, 72);
-            this.calendar_Button34.TabIndex = 34;
-            this.calendar_Button34.Text = "button34";
-            this.calendar_Button34.UseVisualStyleBackColor = true;
-            // 
             // calendar_Button27
             // 
+            this.calendar_Button27.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.calendar_Button27.Location = new System.Drawing.Point(528, 304);
             this.calendar_Button27.Name = "calendar_Button27";
             this.calendar_Button27.Size = new System.Drawing.Size(88, 72);
@@ -366,6 +358,7 @@
             // 
             // calendar_Button20
             // 
+            this.calendar_Button20.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.calendar_Button20.Location = new System.Drawing.Point(528, 232);
             this.calendar_Button20.Name = "calendar_Button20";
             this.calendar_Button20.Size = new System.Drawing.Size(88, 72);
@@ -375,6 +368,7 @@
             // 
             // calendar_Button13
             // 
+            this.calendar_Button13.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.calendar_Button13.Location = new System.Drawing.Point(528, 160);
             this.calendar_Button13.Name = "calendar_Button13";
             this.calendar_Button13.Size = new System.Drawing.Size(88, 72);
@@ -382,25 +376,57 @@
             this.calendar_Button13.Text = "button13";
             this.calendar_Button13.UseVisualStyleBackColor = true;
             // 
+            // nextMonth_Button
+            // 
+            this.nextMonth_Button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.nextMonth_Button.Location = new System.Drawing.Point(448, 400);
+            this.nextMonth_Button.Name = "nextMonth_Button";
+            this.nextMonth_Button.Size = new System.Drawing.Size(104, 32);
+            this.nextMonth_Button.TabIndex = 34;
+            this.nextMonth_Button.Text = "Next Month";
+            this.nextMonth_Button.UseVisualStyleBackColor = true;
+            this.nextMonth_Button.Click += new System.EventHandler(this.nextMonth_Button_Click);
+            // 
+            // previousMonth_Button
+            // 
+            this.previousMonth_Button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.previousMonth_Button.Location = new System.Drawing.Point(328, 400);
+            this.previousMonth_Button.Name = "previousMonth_Button";
+            this.previousMonth_Button.Size = new System.Drawing.Size(104, 32);
+            this.previousMonth_Button.TabIndex = 35;
+            this.previousMonth_Button.Text = "Prev. Month";
+            this.previousMonth_Button.UseVisualStyleBackColor = true;
+            this.previousMonth_Button.Click += new System.EventHandler(this.previousMonth_Button_Click);
+            // 
+            // monthYear_Label
+            // 
+            this.monthYear_Label.AutoSize = true;
+            this.monthYear_Label.Font = new System.Drawing.Font("Segoe UI", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.monthYear_Label.ForeColor = System.Drawing.Color.White;
+            this.monthYear_Label.Location = new System.Drawing.Point(16, 16);
+            this.monthYear_Label.Name = "monthYear_Label";
+            this.monthYear_Label.Size = new System.Drawing.Size(252, 59);
+            this.monthYear_Label.TabIndex = 36;
+            this.monthYear_Label.Text = "Month, Year";
+            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.calendar_Button34);
+            this.Controls.Add(this.monthYear_Label);
+            this.Controls.Add(this.previousMonth_Button);
+            this.Controls.Add(this.nextMonth_Button);
             this.Controls.Add(this.calendar_Button27);
             this.Controls.Add(this.calendar_Button20);
             this.Controls.Add(this.calendar_Button13);
-            this.Controls.Add(this.calendar_Button33);
             this.Controls.Add(this.calendar_Button26);
             this.Controls.Add(this.calendar_Button19);
             this.Controls.Add(this.calendar_Button12);
-            this.Controls.Add(this.calendar_Button32);
             this.Controls.Add(this.calendar_Button25);
             this.Controls.Add(this.calendar_Button18);
             this.Controls.Add(this.calendar_Button11);
-            this.Controls.Add(this.calendar_Button31);
             this.Controls.Add(this.calendar_Button24);
             this.Controls.Add(this.calendar_Button17);
             this.Controls.Add(this.calendar_Button10);
@@ -426,6 +452,7 @@
             this.Name = "mainForm";
             this.Text = "mainForm";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -450,21 +477,20 @@
         private Button calendar_Button23;
         private Button calendar_Button16;
         private Button calendar_Button9;
-        private Button calendar_Button31;
         private Button calendar_Button24;
         private Button calendar_Button17;
         private Button calendar_Button10;
-        private Button calendar_Button32;
         private Button calendar_Button25;
         private Button calendar_Button18;
         private Button calendar_Button11;
-        private Button calendar_Button33;
         private Button calendar_Button26;
         private Button calendar_Button19;
         private Button calendar_Button12;
-        private Button calendar_Button34;
         private Button calendar_Button27;
         private Button calendar_Button20;
         private Button calendar_Button13;
+        private Button nextMonth_Button;
+        private Button previousMonth_Button;
+        private Label monthYear_Label;
     }
 }
