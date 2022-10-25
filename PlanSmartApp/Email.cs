@@ -30,32 +30,33 @@ public class Email
 		
 	}
 
-	public void smtpServer(string client, string port)
+	public void smtpServer()
 	{
-        SmtpClient mySmtpClient = new SmtpClient("my.smtp.exampleserver.net");
+        SmtpClient mySmtpClient = new SmtpClient("smtp-mail.outlook.com", 587);
+        mySmtpClient.EnableSsl = true;
 
         // set smtp-client with basicAuthentication
         mySmtpClient.UseDefaultCredentials = false;
-        System.Net.NetworkCredential basicAuthenticationInfo = new
-           System.Net.NetworkCredential("username", "password");
+        NetworkCredential basicAuthenticationInfo = new
+        NetworkCredential("plansmartapp@outlook.com", "TylerIanMarc");
         mySmtpClient.Credentials = basicAuthenticationInfo;
 
         // add from,to mailaddresses
-        MailAddress from = new MailAddress("test@example.com", "TestFromName");
-        MailAddress to = new MailAddress("test2@example.com", "TestToName");
-        MailMessage myMail = new System.Net.Mail.MailMessage(from, to);
+        MailAddress from = new MailAddress("plansmartapp@outlook.com", "PlanSmart App");
+        MailAddress to = new MailAddress("cupofjoe2002@icloud.com", "Joey Burgee");
+        MailMessage myMail = new MailMessage(from, to);
 
         // add ReplyTo
-        MailAddress replyTo = new MailAddress("reply@example.com");
-        myMail.ReplyToList.Add(replyTo);
+        //MailAddress replyTo = new MailAddress("tylerburgee@gmail.com");
+        //myMail.ReplyToList.Add(replyTo);
 
         // set subject and encoding
         myMail.Subject = "Test message";
-        myMail.SubjectEncoding = System.Text.Encoding.UTF8;
+        myMail.SubjectEncoding = Encoding.UTF8;
 
         // set body-message and encoding
         myMail.Body = "<b>Test Mail</b><br>using <b>HTML</b>.";
-        myMail.BodyEncoding = System.Text.Encoding.UTF8;
+        myMail.BodyEncoding = Encoding.UTF8;
         // text or html
         myMail.IsBodyHtml = true;
 

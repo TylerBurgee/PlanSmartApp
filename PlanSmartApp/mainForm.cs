@@ -41,6 +41,11 @@ namespace PlanSmartApp
             loadCalendar();
         }
 
+        private void frm_menu_FormClosinig(object sender, FormClosingEventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+        }
+
         private void loadCalendar()
         {
             monthYear_Label.Text = date.ToString("MMMM") + " " + date.Year.ToString();

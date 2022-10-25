@@ -19,6 +19,9 @@ namespace PlanSmartApp
 
         private void login_Button_Click(object sender, EventArgs e)
         {
+            Email email = new Email();
+            email.smtpServer();
+
             // Check for null TextBoxes
             if (this.Controls.OfType<TextBox>().Any(t => string.IsNullOrEmpty(t.Text)))
             {
