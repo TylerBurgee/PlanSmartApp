@@ -95,6 +95,7 @@
             this.calendar_Button2.TabIndex = 2;
             this.calendar_Button2.Text = "button2";
             this.calendar_Button2.UseVisualStyleBackColor = true;
+            this.calendar_Button2.Click += new System.EventHandler(this.calendar_Button_Click);
             // 
             // calendar_Button3
             // 
@@ -105,6 +106,7 @@
             this.calendar_Button3.TabIndex = 3;
             this.calendar_Button3.Text = "button3";
             this.calendar_Button3.UseVisualStyleBackColor = true;
+            this.calendar_Button3.Click += new System.EventHandler(this.calendar_Button_Click);
             // 
             // calendar_Button4
             // 
@@ -115,6 +117,7 @@
             this.calendar_Button4.TabIndex = 4;
             this.calendar_Button4.Text = "button4";
             this.calendar_Button4.UseVisualStyleBackColor = true;
+            this.calendar_Button4.Click += new System.EventHandler(this.calendar_Button_Click);
             // 
             // calendar_Button5
             // 
@@ -125,6 +128,7 @@
             this.calendar_Button5.TabIndex = 5;
             this.calendar_Button5.Text = "button5";
             this.calendar_Button5.UseVisualStyleBackColor = true;
+            this.calendar_Button5.Click += new System.EventHandler(this.calendar_Button_Click);
             // 
             // calendar_Button6
             // 
@@ -135,6 +139,7 @@
             this.calendar_Button6.TabIndex = 6;
             this.calendar_Button6.Text = "button6";
             this.calendar_Button6.UseVisualStyleBackColor = true;
+            this.calendar_Button6.Click += new System.EventHandler(this.calendar_Button_Click);
             // 
             // calendar_Button7
             // 
@@ -145,6 +150,7 @@
             this.calendar_Button7.TabIndex = 7;
             this.calendar_Button7.Text = "button7";
             this.calendar_Button7.UseVisualStyleBackColor = true;
+            this.calendar_Button7.Click += new System.EventHandler(this.calendar_Button_Click);
             // 
             // calendar_Button14
             // 
@@ -155,6 +161,7 @@
             this.calendar_Button14.TabIndex = 8;
             this.calendar_Button14.Text = "button14";
             this.calendar_Button14.UseVisualStyleBackColor = true;
+            this.calendar_Button14.Click += new System.EventHandler(this.calendar_Button_Click);
             // 
             // calendar_Button21
             // 
@@ -165,6 +172,7 @@
             this.calendar_Button21.TabIndex = 9;
             this.calendar_Button21.Text = "button21";
             this.calendar_Button21.UseVisualStyleBackColor = true;
+            this.calendar_Button21.Click += new System.EventHandler(this.calendar_Button_Click);
             // 
             // calendar_Button28
             // 
@@ -175,6 +183,7 @@
             this.calendar_Button28.TabIndex = 10;
             this.calendar_Button28.Text = "button28";
             this.calendar_Button28.UseVisualStyleBackColor = true;
+            this.calendar_Button28.Click += new System.EventHandler(this.calendar_Button_Click);
             // 
             // calendar_Button29
             // 
@@ -185,6 +194,7 @@
             this.calendar_Button29.TabIndex = 14;
             this.calendar_Button29.Text = "button29";
             this.calendar_Button29.UseVisualStyleBackColor = true;
+            this.calendar_Button29.Click += new System.EventHandler(this.calendar_Button_Click);
             // 
             // calendar_Button22
             // 
@@ -195,6 +205,7 @@
             this.calendar_Button22.TabIndex = 13;
             this.calendar_Button22.Text = "button22";
             this.calendar_Button22.UseVisualStyleBackColor = true;
+            this.calendar_Button22.Click += new System.EventHandler(this.calendar_Button_Click);
             // 
             // calendar_Button15
             // 
@@ -205,6 +216,7 @@
             this.calendar_Button15.TabIndex = 12;
             this.calendar_Button15.Text = "button15";
             this.calendar_Button15.UseVisualStyleBackColor = true;
+            this.calendar_Button15.Click += new System.EventHandler(this.calendar_Button_Click);
             // 
             // calendar_Button8
             // 
@@ -215,6 +227,7 @@
             this.calendar_Button8.TabIndex = 11;
             this.calendar_Button8.Text = "button8";
             this.calendar_Button8.UseVisualStyleBackColor = true;
+            this.calendar_Button8.Click += new System.EventHandler(this.calendar_Button_Click);
             // 
             // calendar_Button30
             // 
@@ -225,6 +238,7 @@
             this.calendar_Button30.TabIndex = 18;
             this.calendar_Button30.Text = "button30";
             this.calendar_Button30.UseVisualStyleBackColor = true;
+            this.calendar_Button30.Click += new System.EventHandler(this.calendar_Button_Click);
             // 
             // calendar_Button23
             // 
@@ -235,6 +249,7 @@
             this.calendar_Button23.TabIndex = 17;
             this.calendar_Button23.Text = "button23";
             this.calendar_Button23.UseVisualStyleBackColor = true;
+            this.calendar_Button23.Click += new System.EventHandler(this.calendar_Button_Click);
             // 
             // calendar_Button16
             // 
@@ -245,6 +260,7 @@
             this.calendar_Button16.TabIndex = 16;
             this.calendar_Button16.Text = "button16";
             this.calendar_Button16.UseVisualStyleBackColor = true;
+            this.calendar_Button16.Click += new System.EventHandler(this.calendar_Button_Click);
             // 
             // calendar_Button9
             // 
@@ -255,6 +271,7 @@
             this.calendar_Button9.TabIndex = 15;
             this.calendar_Button9.Text = "button9";
             this.calendar_Button9.UseVisualStyleBackColor = true;
+            this.calendar_Button9.Click += new System.EventHandler(this.calendar_Button_Click);
             // 
             // calendar_Button24
             // 
@@ -265,6 +282,7 @@
             this.calendar_Button24.TabIndex = 21;
             this.calendar_Button24.Text = "button24";
             this.calendar_Button24.UseVisualStyleBackColor = true;
+            this.calendar_Button24.Click += new System.EventHandler(this.calendar_Button_Click);
             // 
             // calendar_Button17
             // 
@@ -275,6 +293,7 @@
             this.calendar_Button17.TabIndex = 20;
             this.calendar_Button17.Text = "button17";
             this.calendar_Button17.UseVisualStyleBackColor = true;
+            this.calendar_Button17.Click += new System.EventHandler(this.calendar_Button_Click);
             // 
             // calendar_Button10
             // 
@@ -285,6 +304,7 @@
             this.calendar_Button10.TabIndex = 19;
             this.calendar_Button10.Text = "button10";
             this.calendar_Button10.UseVisualStyleBackColor = true;
+            this.calendar_Button10.Click += new System.EventHandler(this.calendar_Button_Click);
             // 
             // calendar_Button25
             // 
@@ -295,6 +315,7 @@
             this.calendar_Button25.TabIndex = 25;
             this.calendar_Button25.Text = "button25";
             this.calendar_Button25.UseVisualStyleBackColor = true;
+            this.calendar_Button25.Click += new System.EventHandler(this.calendar_Button_Click);
             // 
             // calendar_Button18
             // 
@@ -305,6 +326,7 @@
             this.calendar_Button18.TabIndex = 24;
             this.calendar_Button18.Text = "button18";
             this.calendar_Button18.UseVisualStyleBackColor = true;
+            this.calendar_Button18.Click += new System.EventHandler(this.calendar_Button_Click);
             // 
             // calendar_Button11
             // 
@@ -315,6 +337,7 @@
             this.calendar_Button11.TabIndex = 23;
             this.calendar_Button11.Text = "button11";
             this.calendar_Button11.UseVisualStyleBackColor = true;
+            this.calendar_Button11.Click += new System.EventHandler(this.calendar_Button_Click);
             // 
             // calendar_Button26
             // 
@@ -325,6 +348,7 @@
             this.calendar_Button26.TabIndex = 29;
             this.calendar_Button26.Text = "button26";
             this.calendar_Button26.UseVisualStyleBackColor = true;
+            this.calendar_Button26.Click += new System.EventHandler(this.calendar_Button_Click);
             // 
             // calendar_Button19
             // 
@@ -335,6 +359,7 @@
             this.calendar_Button19.TabIndex = 28;
             this.calendar_Button19.Text = "button19";
             this.calendar_Button19.UseVisualStyleBackColor = true;
+            this.calendar_Button19.Click += new System.EventHandler(this.calendar_Button_Click);
             // 
             // calendar_Button12
             // 
@@ -345,6 +370,7 @@
             this.calendar_Button12.TabIndex = 27;
             this.calendar_Button12.Text = "button12";
             this.calendar_Button12.UseVisualStyleBackColor = true;
+            this.calendar_Button12.Click += new System.EventHandler(this.calendar_Button_Click);
             // 
             // calendar_Button27
             // 
@@ -355,6 +381,7 @@
             this.calendar_Button27.TabIndex = 33;
             this.calendar_Button27.Text = "button27";
             this.calendar_Button27.UseVisualStyleBackColor = true;
+            this.calendar_Button27.Click += new System.EventHandler(this.calendar_Button_Click);
             // 
             // calendar_Button20
             // 
@@ -365,6 +392,7 @@
             this.calendar_Button20.TabIndex = 32;
             this.calendar_Button20.Text = "button20";
             this.calendar_Button20.UseVisualStyleBackColor = true;
+            this.calendar_Button20.Click += new System.EventHandler(this.calendar_Button_Click);
             // 
             // calendar_Button13
             // 
@@ -375,6 +403,7 @@
             this.calendar_Button13.TabIndex = 31;
             this.calendar_Button13.Text = "button13";
             this.calendar_Button13.UseVisualStyleBackColor = true;
+            this.calendar_Button13.Click += new System.EventHandler(this.calendar_Button_Click);
             // 
             // nextMonth_Button
             // 
