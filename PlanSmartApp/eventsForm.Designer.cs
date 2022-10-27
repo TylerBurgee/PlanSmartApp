@@ -34,12 +34,13 @@
             this.events_ListBox = new System.Windows.Forms.ListBox();
             this.header_Label = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.createInvite_Button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // createEvent_Button
             // 
             this.createEvent_Button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.createEvent_Button.Location = new System.Drawing.Point(72, 376);
+            this.createEvent_Button.Location = new System.Drawing.Point(24, 376);
             this.createEvent_Button.Name = "createEvent_Button";
             this.createEvent_Button.Size = new System.Drawing.Size(80, 56);
             this.createEvent_Button.TabIndex = 0;
@@ -50,7 +51,7 @@
             // modifyEvent_Button
             // 
             this.modifyEvent_Button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.modifyEvent_Button.Location = new System.Drawing.Point(168, 376);
+            this.modifyEvent_Button.Location = new System.Drawing.Point(120, 376);
             this.modifyEvent_Button.Name = "modifyEvent_Button";
             this.modifyEvent_Button.Size = new System.Drawing.Size(80, 56);
             this.modifyEvent_Button.TabIndex = 1;
@@ -61,7 +62,7 @@
             // deleteEvent_Button
             // 
             this.deleteEvent_Button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.deleteEvent_Button.Location = new System.Drawing.Point(264, 376);
+            this.deleteEvent_Button.Location = new System.Drawing.Point(216, 376);
             this.deleteEvent_Button.Name = "deleteEvent_Button";
             this.deleteEvent_Button.Size = new System.Drawing.Size(80, 56);
             this.deleteEvent_Button.TabIndex = 2;
@@ -99,11 +100,23 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "00/00/00";
             // 
+            // createInvite_Button
+            // 
+            this.createInvite_Button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.createInvite_Button.Location = new System.Drawing.Point(312, 376);
+            this.createInvite_Button.Name = "createInvite_Button";
+            this.createInvite_Button.Size = new System.Drawing.Size(80, 56);
+            this.createInvite_Button.TabIndex = 6;
+            this.createInvite_Button.Text = "Create Invite";
+            this.createInvite_Button.UseVisualStyleBackColor = true;
+            this.createInvite_Button.Click += new System.EventHandler(this.createInvite_Button_Click);
+            // 
             // eventsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(415, 450);
+            this.Controls.Add(this.createInvite_Button);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.header_Label);
             this.Controls.Add(this.events_ListBox);
@@ -125,5 +138,6 @@
         private ListBox events_ListBox;
         private Label header_Label;
         private Label label1;
+        private Button createInvite_Button;
     }
 }

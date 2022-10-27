@@ -43,5 +43,12 @@ namespace PlanSmartApp
         {
 
         }
+
+        /* Get selected event, send email with event details */
+        private void createInvite_Button_Click(object sender, EventArgs e)
+        {
+            var emailForm = new emailForm();
+            emailForm.Show();
+        }
     }
 }

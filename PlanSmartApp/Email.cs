@@ -21,7 +21,7 @@ public class Email
         return;
     }
 
-	public void smtpServer()
+	public void sendMail(string toEmail, string subject, string eventName, string eventTime, string eventLocation, string message)
 	{
         SmtpClient mySmtpClient = new SmtpClient("smtp-mail.outlook.com", 587);
         mySmtpClient.EnableSsl = true;
@@ -34,15 +34,15 @@ public class Email
 
         // add from,to mailaddresses
         MailAddress from = new MailAddress("plansmartapp@outlook.com", "PlanSmart App");
-        MailAddress to = new MailAddress("cupofjoe2002@icloud.com", "Joey Burgee");
+        MailAddress to = new MailAddress(toEmail);
         MailMessage myMail = new MailMessage(from, to);
 
         // set subject and encoding
-        myMail.Subject = "Test message";
+        myMail.Subject = subject;
         myMail.SubjectEncoding = Encoding.UTF8;
 
         // set body-message and encoding
-        myMail.Body = "<b>Test Mail</b><br>using <b>HTML</b>.";
+        myMail.Body = "<b>" + eventName + ": " + eventTime + "</b><br>" + "Location: " + eventLocation + "</br><br>Message: " + message + "</br>";
         myMail.BodyEncoding = Encoding.UTF8;
         // text or html
         myMail.IsBodyHtml = true;
