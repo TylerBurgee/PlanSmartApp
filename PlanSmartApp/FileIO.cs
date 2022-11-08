@@ -21,10 +21,9 @@ public class FileIO
 	{
         string text = File.ReadAllText(filename);
         MessageBox.Show(text);
-        string jsonString = JsonSerializer.Serialize(text);
         // Sub-dictionaries looks like this within the .json file: 
         // {id1: {key1: value1, key2: value2}, id2: {key1: value1, key2: value2}}
-        string dataToWrite = jsonString + "{\"1000\": {";
+        string dataToWrite = text + "{\"1000\": {";
 		foreach (KeyValuePair<string, string> element in new_subdict)
 		{
             dataToWrite = dataToWrite + "\"" + element.Key + "\":\"" + element.Value + "\",";
