@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualBasic.ApplicationServices;
 using System;
+using System.Net.Http.Json;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
@@ -18,15 +19,20 @@ public class FileIO
 	/* Create new sub-dictionary within .json file */
 	public static void create_subdict(string filename, Dictionary<string, string> new_subdict)
 	{
-		// Sub-dictionaries looks like this within the .json file: 
-		// {id1: {key1: value1, key2: value2}, id2: {key1: value1, key2: value2}}
-		string dataToWrite = "{\"1000\": {";
+        string text = File.ReadAllText(filename);
+        MessageBox.Show(text);
+        string jsonString = JsonSerializer.Serialize(text);
+        // Sub-dictionaries looks like this within the .json file: 
+        // {id1: {key1: value1, key2: value2}, id2: {key1: value1, key2: value2}}
+        string dataToWrite = jsonString + "{\"1000\": {";
 		foreach (KeyValuePair<string, string> element in new_subdict)
 		{
             dataToWrite = dataToWrite + "\"" + element.Key + "\":\"" + element.Value + "\",";
 
         } 
         dataToWrite = dataToWrite + "}}";
+
+		//MessageBox.Show(dataToWrite);
 
         System.IO.File.WriteAllText(filename, dataToWrite);
 	}

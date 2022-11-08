@@ -27,6 +27,7 @@ public class Login
         user_info.Add("username", username);
         user_info.Add("password", password);
 
+		//FileIO.create_file(filename);
 		// Create a subdict to store new user's info
 		FileIO.create_subdict(filename, user_info);
 
