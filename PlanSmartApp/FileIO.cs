@@ -10,6 +10,14 @@ public class FileIO
 	{
 	}
 
+	public static void read_file(string filename)
+	{
+		string text = File.ReadAllText(filename);
+		var file = JsonSerializer.Deserialize<Client>(text);
+        MessageBox.Show(file.username);
+
+    }
+
 	/* Creates new, empty .json file */
 	public static void create_file(string filename)
 	{

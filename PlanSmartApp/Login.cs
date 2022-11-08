@@ -4,8 +4,6 @@ using System.Xml.Linq;
 
 public class Login
 {
-	private static string filename = "userAccounts.json";
-
 	public Login()
 	{
 	}
@@ -13,7 +11,9 @@ public class Login
 	/*Verify user's login credentials*/
 	public static bool verifyCredentials(string username, string password)
 	{
-		return true;
+		FileIO.read_file(username + ".json");
+
+        return true;
 	}
 
     /*Create a new user account*/
@@ -27,9 +27,9 @@ public class Login
         user_info.Add("username", username);
         user_info.Add("password", password);
 
-		//FileIO.create_file(filename);
-		// Create a subdict to store new user's info
-		FileIO.create_subdict(filename, user_info);
+		string filename = username + ".json";
+
+		FileIO.create_file(filename);
 
 		return true;
     }
