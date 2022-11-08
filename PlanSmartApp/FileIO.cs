@@ -10,11 +10,14 @@ public class FileIO
 	{
 	}
 
-	public static void read_file(string filename)
+	public static dynamic read_file(string filename)
 	{
 		string text = File.ReadAllText(filename);
 		var file = JsonSerializer.Deserialize<Client>(text);
-        MessageBox.Show(file.username);
+
+		string[] user_info = { file.username, file.password, file.firstName, file.lastName, file.email };
+
+		return user_info;
 
     }
 
@@ -25,23 +28,26 @@ public class FileIO
     }
 	
 	/* Create new sub-dictionary within .json file */
-	public static void create_subdict(string filename, Dictionary<string, string> new_subdict)
+	public static void write_to_file(string filename, Dictionary<string, string> new_subdict)
 	{
-        string text = File.ReadAllText(filename);
-        MessageBox.Show(text);
-        // Sub-dictionaries looks like this within the .json file: 
-        // {id1: {key1: value1, key2: value2}, id2: {key1: value1, key2: value2}}
-        string dataToWrite = text + "{\"1000\": {";
+        int counter = 0;
+        string dataToWrite = "{";
+
 		foreach (KeyValuePair<string, string> element in new_subdict)
 		{
-            dataToWrite = dataToWrite + "\"" + element.Key + "\":\"" + element.Value + "\",";
+			if (counter == new_subdict.Count - 1)
+			{
+				dataToWrite = dataToWrite + "\"" + element.Key + "\":\"" + element.Value + "\"";
+			}
+			else
+			{
+                dataToWrite = dataToWrite + "\"" + element.Key + "\":\"" + element.Value + "\",";
+            }
+            counter++;
+        }
+        dataToWrite += "}";
 
-        } 
-        dataToWrite = dataToWrite + "}}";
-
-		//MessageBox.Show(dataToWrite);
-
-        System.IO.File.WriteAllText(filename, dataToWrite);
+        File.WriteAllText(filename, dataToWrite);
 	}
 
 	/* Delete sub-dictionary from .json file */

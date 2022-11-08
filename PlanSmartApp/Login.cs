@@ -1,6 +1,7 @@
 ﻿using System;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 using System.Xml.Linq;
+using System.Linq;
 
 public class Login
 {
@@ -11,9 +12,16 @@ public class Login
 	/*Verify user's login credentials*/
 	public static bool verifyCredentials(string username, string password)
 	{
-		FileIO.read_file(username + ".json");
+		var user_info = FileIO.read_file(username + ".json");
 
-        return true;
+		if (password == user_info.GetValue(1))
+		{
+            return true;
+        }
+		else
+		{
+			return false;
+		}
 	}
 
     /*Create a new user account*/
@@ -30,7 +38,8 @@ public class Login
 		string filename = username + ".json";
 
 		FileIO.create_file(filename);
+		FileIO.write_to_file(filename, user_info);
 
-		return true;
+        return true;
     }
 }

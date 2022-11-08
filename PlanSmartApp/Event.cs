@@ -31,7 +31,7 @@ public class Event
         new_event.Add("location", location);
 
         // Save dictionary to events database
-        FileIO.create_subdict("events.json", new_event);
+        FileIO.write_to_file("events.json", new_event);
     }
 
     public void deleteEvent(string event_id)
