@@ -56,7 +56,7 @@ namespace PlanSmartApp
                 if (currentMonth == date.AddDays(i).Month)
                 {
                     // Display Day and Day of Week, respectively.
-                    calendarButtons[i].Text = date.AddDays(i).Day.ToString();
+                    calendarButtons[i].Text = date.AddDays(i).Day.ToString("00");
                     calendarButtons[i].Text += "\n" + date.AddDays(i).DayOfWeek.ToString();
                 }
                 else { calendarButtons[i].Text = "..."; }
@@ -74,9 +74,9 @@ namespace PlanSmartApp
             var button = (Button)sender;
 
             string username = loginForm.username;
-            int day = Int32.Parse(button.Name.Replace("calendar_Button", "") + 1);
-            string selected_day = day.ToString();
-            selected_date = this.currentMonth + "/" + selected_day + "/" + this.currentYear;
+            string day = button.Text;
+            day = day.Substring(0, 2);
+            selected_date = this.currentMonth + "/" + day + "/" + this.currentYear;
             var events = Event.getEvents(selected_date, username);
 
             var eventsForm = new eventsForm(selected_date);
