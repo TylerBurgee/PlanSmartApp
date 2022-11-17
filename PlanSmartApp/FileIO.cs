@@ -60,7 +60,6 @@ public class FileIO
         {
             data_to_write += line + "\n";
         }
-        MessageBox.Show(data_to_write);
         File.WriteAllText(filename, data_to_write);
     }
 

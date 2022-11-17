@@ -65,6 +65,11 @@ namespace PlanSmartApp
 
         private void calendar_Button_Click(object sender, EventArgs e)
         {
+            if (!File.Exists("events.txt"))
+            {
+                FileIO.createFile("events.txt", "");
+            }
+
             // Show main programForm, hide loginForm
             var button = (Button)sender;
 
@@ -73,6 +78,7 @@ namespace PlanSmartApp
             string selected_day = day.ToString();
             selected_date = this.currentMonth + "/" + selected_day + "/" + this.currentYear;
             var events = Event.getEvents(selected_date, username);
+
             var eventsForm = new eventsForm(selected_date);
             eventsForm.setEvent();
             eventsForm.Show();

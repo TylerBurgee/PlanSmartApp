@@ -17,6 +17,7 @@ namespace PlanSmartApp
         {
             InitializeComponent();
             this.date = date;
+            date_Label.Text = date;
         }
         
         /* Get data from createEventForm, add data to list of events, and send data to Events to be saved into database */
@@ -24,7 +25,15 @@ namespace PlanSmartApp
         {
             string username = loginForm.username;
             var user_events = Event.getEvents(date, username);
-            events_ListBox.Items.Add(user_events[0] + ", date: " + user_events[1] + ", time: " + user_events[2] + ", location: " + user_events[3]);
+
+            events_ListBox.Items.Clear();
+
+            foreach (string line in user_events)
+            {
+                var splitLine = line.Split(',');
+                events_ListBox.Items.Add(splitLine[0] + ", date: " + splitLine[1] + ", time: " + splitLine[2] + ", location: " + splitLine[3]);
+            }
+            
             //events_ListBox.Items.Add(event_name + ", time: " + event_time + ", location: " + event_location);
         }
 

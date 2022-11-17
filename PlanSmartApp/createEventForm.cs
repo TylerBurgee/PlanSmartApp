@@ -30,7 +30,7 @@ namespace PlanSmartApp
 
             string data_to_write = event_name + "," + this.date + "," + event_time + "," + event_location + "," + loginForm.username;
 
-            Event.createEvent(event_name, "DATE", event_time, event_location, loginForm.username);
+            Event.createEvent(event_name, this.date, event_time, event_location, loginForm.username);
             eventsForm.setEvent();
             this.Hide();
         }

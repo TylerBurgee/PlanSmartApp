@@ -64,7 +64,6 @@ public class Event
                 events.Add(line);
             }
         }
-        MessageBox.Show(events[0]);
         return events;
     }
 }
