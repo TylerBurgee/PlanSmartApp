@@ -12,6 +12,7 @@ namespace PlanSmartApp
 {
     public partial class mainForm : Form
     {
+        public string selected_date;
         private int currentMonth;
         private int currentYear;
         private DateTime date;
@@ -41,7 +42,7 @@ namespace PlanSmartApp
             loadCalendar();
         }
 
-        private void frm_menu_FormClosinig(object sender, FormClosingEventArgs e)
+        private void form_menu_FormClosing(object sender, FormClosingEventArgs e)
         {
             System.Windows.Forms.Application.Exit();
         }
@@ -65,7 +66,15 @@ namespace PlanSmartApp
         private void calendar_Button_Click(object sender, EventArgs e)
         {
             // Show main programForm, hide loginForm
-            var eventsForm = new eventsForm();
+            var button = (Button)sender;
+
+            string username = loginForm.username;
+            int day = Int32.Parse(button.Name.Replace("calendar_Button", "") + 1);
+            string selected_day = day.ToString();
+            selected_date = this.currentMonth + "/" + selected_day + "/" + this.currentYear;
+            var events = Event.getEvents(selected_date, username);
+            var eventsForm = new eventsForm(selected_date);
+            eventsForm.setEvent();
             eventsForm.Show();
         }
 

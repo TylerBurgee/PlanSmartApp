@@ -12,21 +12,26 @@ namespace PlanSmartApp
 {
     public partial class eventsForm : Form
     {
-        public eventsForm()
+        private string date;
+        public eventsForm(string date)
         {
             InitializeComponent();
+            this.date = date;
         }
         
         /* Get data from createEventForm, add data to list of events, and send data to Events to be saved into database */
-        public void setEvent(string event_name, string event_time, string event_location)
+        public void setEvent()
         {
-            events_ListBox.Items.Add(event_name + ", time: " + event_time + ", location: " + event_location);
+            string username = loginForm.username;
+            var user_events = Event.getEvents(date, username);
+            events_ListBox.Items.Add(user_events[0] + ", date: " + user_events[1] + ", time: " + user_events[2] + ", location: " + user_events[3]);
+            //events_ListBox.Items.Add(event_name + ", time: " + event_time + ", location: " + event_location);
         }
 
         /* Create form for getting user input */
         private void createEvent_Button_Click(object sender, EventArgs e)
         {
-            var createEventForm = new createEventForm(this);
+            var createEventForm = new createEventForm(this, this.date);
             createEventForm.Show();
         }
 

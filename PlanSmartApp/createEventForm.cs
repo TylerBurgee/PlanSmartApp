@@ -13,11 +13,12 @@ namespace PlanSmartApp
     public partial class createEventForm : Form
     {
         eventsForm eventsForm;
-
-        public createEventForm(eventsForm ef)
+        string date;
+        public createEventForm(eventsForm ef, string date)
         {
             InitializeComponent();
             eventsForm = ef;
+            this.date = date;
         }
 
         /* Gets user input and sends it to eventsForm for processing */
@@ -27,10 +28,10 @@ namespace PlanSmartApp
             string event_time = time_TextBox.Text;
             string event_location = location_TextBox.Text;
 
-            string data_to_write = event_name + "," + event_time + "," + event_location + "," + loginForm.username;
+            string data_to_write = event_name + "," + this.date + "," + event_time + "," + event_location + "," + loginForm.username;
 
-            Event.createEvent(event_name, event_time, event_location, loginForm.username);
-            eventsForm.setEvent(event_name, event_time, event_location);
+            Event.createEvent(event_name, "DATE", event_time, event_location, loginForm.username);
+            eventsForm.setEvent();
             this.Hide();
         }
     }
