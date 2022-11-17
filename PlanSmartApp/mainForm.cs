@@ -64,11 +64,6 @@ namespace PlanSmartApp
 
         private void calendar_Button_Click(object sender, EventArgs e)
         {
-            //Button buttonClicked = (Button)sender;
-            //string buttonNumber = buttonClicked.Name.Replace("calendarButtons", "");
-
-            //DateTime dateSelected = date.AddDays(Int32.Parse(buttonNumber));
-
             // Show main programForm, hide loginForm
             var eventsForm = new eventsForm();
             eventsForm.Show();

@@ -21,8 +21,6 @@ namespace PlanSmartApp
         public void setEvent(string event_name, string event_time, string event_location)
         {
             events_ListBox.Items.Add(event_name + ", time: " + event_time + ", location: " + event_location);
-
-            Event.createEvent(event_name, event_time, event_location);
         }
 
         /* Create form for getting user input */

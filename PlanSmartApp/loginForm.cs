@@ -12,6 +12,8 @@ namespace PlanSmartApp
 {
     public partial class loginForm : Form
     {
+        public static string username = "";
+
         public loginForm()
         {
             InitializeComponent();
@@ -30,14 +32,15 @@ namespace PlanSmartApp
                 // No TextBoxes are empty
 
                 // Obtain user's inputted login credentials
-                string username = username_TextBox.Text;
+                string input_username = username_TextBox.Text;
                 string password = password_TextBox.Text;
 
                 // Verify login credentials
-                bool login_successful = Login.verifyCredentials(username, password);
+                bool login_successful = Login.verifyCredentials(input_username, password);
 
                 if (login_successful)
                 {
+                    username = input_username;
                     // Show main programForm, hide loginForm
                     var mainForm = new mainForm();
                     mainForm.Show();

@@ -18,7 +18,6 @@ public class FileIO
 		string[] user_info = { file.username, file.password, file.firstName, file.lastName, file.email };
 
 		return user_info;
-
     }
 
 	/* Creates new, empty .json file */
@@ -27,7 +26,7 @@ public class FileIO
 		using (FileStream fs = File.Create(filename));
     }
 	
-	/* Create new sub-dictionary within .json file */
+	/* Create new dictionary within .json file */
 	public static void write_to_file(string filename, Dictionary<string, string> new_subdict)
 	{
         int counter = 0;
@@ -50,15 +49,31 @@ public class FileIO
         File.WriteAllText(filename, dataToWrite);
 	}
 
-	/* Delete sub-dictionary from .json file */
-	public static void delete_subdict(string filename)
+    /* Appends content to a .txt file */
+	public static void appendToFile(string filename, string content)
 	{
-		File.Delete(filename);
-	}
+        var file_lines = File.ReadAllLines(filename);
+        var new_content = file_lines.Append(content);
 
-	/* Add new key-pair value to existing sub-dictionary within .json file */
-	public static void add_to_subdict(string filename)
-	{
+        string data_to_write = "";
+        foreach (string line in new_content)
+        {
+            data_to_write += line + "\n";
+        }
+        MessageBox.Show(data_to_write);
+        File.WriteAllText(filename, data_to_write);
+    }
 
-	}
+    /* Reads from a text file */
+    public static dynamic readFile(string filename)
+    {
+        var file_lines = File.ReadAllLines(filename);
+        return file_lines;
+    }
+
+    /* Creates a .txt file, writes given content, and saves it to examArchives folder */
+    public static void createFile(string filename, string content)
+    {
+        File.WriteAllText(filename, content);
+    }
 }

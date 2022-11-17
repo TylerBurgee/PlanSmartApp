@@ -27,8 +27,12 @@ namespace PlanSmartApp
             string event_time = time_TextBox.Text;
             string event_location = location_TextBox.Text;
 
+            string data_to_write = event_name + "," + event_time + "," + event_location + "," + loginForm.username;
+
+            Event.createEvent(event_name, event_time, event_location, loginForm.username);
             eventsForm.setEvent(event_name, event_time, event_location);
             this.Hide();
         }
     }
 }
+

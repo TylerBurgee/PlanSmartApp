@@ -22,16 +22,13 @@ public class Event
 	}
 
     /* Formats event to be saved into databse */
-	public static void createEvent(string name, string time, string location)
+	public static void createEvent(string name, string time, string location, string username)
 	{
         // Create dictionary with event details
-        Dictionary<string, string> new_event = new Dictionary<string, string>();
-        new_event.Add("name", name);
-        new_event.Add("time", time);
-        new_event.Add("location", location);
+        string data_to_save = name + "," + time + "," + location + "," + username;
 
-        // Save dictionary to events database
-        FileIO.write_to_file("events.json", new_event);
+        // Save event to database
+        FileIO.appendToFile("events.txt", data_to_save);
     }
 
     public void deleteEvent(string event_id)
@@ -53,6 +50,21 @@ public class Event
 
         // Modify contents of events database
 
+    }
+
+    public List<string> getEvents(DateTime date, string username)
+    {
+        var file_lines = FileIO.readFile("events.txt");
+        List<string> events = new List<string>();
+
+        foreach (string line in file_lines)
+        {
+            if (line.Contains(date.ToString()) && line.Contains(username))
+            {
+                events.Add(line);
+            }
+        }
+        return events;
     }
 
 }
