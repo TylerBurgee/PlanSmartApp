@@ -75,4 +75,16 @@ public class FileIO
     {
         File.WriteAllText(filename, content);
     }
+
+    public static void removeFromFile(string filename, string content)
+    {
+        var file_lines = File.ReadAllLines(filename);
+        createFile(filename, "");
+
+        foreach (string line in file_lines)
+        {
+            if (line != content)
+                appendToFile(filename, line);
+        }
+    }
 }

@@ -31,10 +31,8 @@ namespace PlanSmartApp
             foreach (string line in user_events)
             {
                 var splitLine = line.Split(',');
-                events_ListBox.Items.Add(splitLine[0] + ", date: " + splitLine[1] + ", time: " + splitLine[2] + ", location: " + splitLine[3]);
+                events_ListBox.Items.Add(splitLine[0] + "," + splitLine[1] + "," + splitLine[2] + "," + splitLine[3]);
             }
-            
-            //events_ListBox.Items.Add(event_name + ", time: " + event_time + ", location: " + event_location);
         }
 
         /* Create form for getting user input */
@@ -47,19 +45,25 @@ namespace PlanSmartApp
         /* Get selected event, send data to Events to be modified */
         private void modifyEvent_Button_Click(object sender, EventArgs e)
         {
+            string selectedEvent = events_ListBox.GetItemText(events_ListBox.SelectedItem);
+            var modifyEventForm = new modifyEventForm(this, this.date, selectedEvent);
 
+            modifyEventForm.Show();
         }
 
         /* Get selected event, send data to Events to be deleted */
         private void deleteEvent_Button_Click(object sender, EventArgs e)
         {
-
+            string selectedEvent = events_ListBox.GetItemText(events_ListBox.SelectedItem);
+            FileIO.removeFromFile("events.txt", selectedEvent + "," + loginForm.username);
+            setEvent();
         }
 
         /* Get selected event, send email with event details */
         private void createInvite_Button_Click(object sender, EventArgs e)
         {
-            var emailForm = new emailForm();
+            string selected_event = events_ListBox.GetItemText(events_ListBox.SelectedItem);
+            var emailForm = new emailForm(selected_event);
             emailForm.Show();
         }
     }
