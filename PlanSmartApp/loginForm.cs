@@ -29,28 +29,40 @@ namespace PlanSmartApp
             }
             else
             {
-                // No TextBoxes are empty
+                
 
-                // Obtain user's inputted login credentials
-                string input_username = username_TextBox.Text;
-                string password = password_TextBox.Text;
+                
+                try
+                {    
+                    // No TextBoxes are empty
 
-                // Verify login credentials
-                bool login_successful = Login.verifyCredentials(input_username, password);
+                    // Obtain user's inputted login credentials
+                    string input_username = username_TextBox.Text;
+                    string password = password_TextBox.Text;
 
-                if (login_successful)
-                {
-                    username = input_username;
-                    // Show main programForm, hide loginForm
-                    var mainForm = new mainForm();
-                    mainForm.Show();
-                    this.Hide();
+                    // Verify login credentials
+                    bool login_successful = Login.verifyCredentials(input_username, password);
+
+                    if (login_successful)
+                    {
+                        username = input_username;
+                        // Show main programForm, hide loginForm
+                        var mainForm = new mainForm();
+                        mainForm.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        // Show error message, reset password textbox
+                        MessageBox.Show("Login failed! Incorrect username or password.");
+                        password_TextBox.Text = "";
+                    }
                 }
-                else
+                // Most common error if attempting to login with invalid credentials as login info is retrieved via [username].json
+                catch (System.IO.FileNotFoundException)
                 {
-                    // Show error message, reset password textbox
-                    MessageBox.Show("Login failed! Incorrect username or password.");
-                    password_TextBox.Text = "";
+                    // Show error message, reset textboxes
+                    MessageBox.Show("This user does not exist. Please double-check your credentials.");
                 }
             }
         }
