@@ -29,9 +29,6 @@ namespace PlanSmartApp
             }
             else
             {
-                
-
-                
                 try
                 {    
                     // No TextBoxes are empty
